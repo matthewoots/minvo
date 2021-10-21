@@ -1,0 +1,3 @@
+[submodule "src/YALMIP"]
+	path = src/YALMIP
+	url = git@github.com:yalmip/YALMIP.git

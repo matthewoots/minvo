@@ -7,6 +7,7 @@
 %  * -------------------------------------------------------------------------- */
 
 clear; clc; close all;
+addpath(genpath('YALMIP'));
 set(0,'DefaultFigureWindowStyle','docked') %'normal'
 
 deg=3;

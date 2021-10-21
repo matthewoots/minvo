@@ -13,7 +13,7 @@ addpath(genpath('./solutions'));
 
 %delete(gcp('nocreate')); %This deletes the parallel pool
 
-n=3;
+n=4;
 deg_is_even = (rem(n, 2) == 0);
 
 interv=[-1,1];

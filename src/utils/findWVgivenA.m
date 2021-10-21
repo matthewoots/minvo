@@ -37,7 +37,7 @@ function [W V]=findWVgivenA(A_solution)
     for i=1:(deg+1)
         Wi=W(:,(i-1)*size_Wi+1:i*size_Wi);
         Vi=V(:,(i-1)*size_Vi+1:i*size_Vi);
-
+        
         %Wi and Vi are psd matrices
         constraints=[constraints, Wi>=0, Vi>=0];
 

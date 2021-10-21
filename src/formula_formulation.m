@@ -12,7 +12,7 @@ global use_yalmip
 
 use_yalmip=false; % If true, it will try to obtain a global optimum (using moment relaxations)
                   % If false, it will try to obtain a local optimum (using fmincon from many different initial guesses)
-n=3;
+n=4;
 
 %
 if (use_yalmip==true)
@@ -199,7 +199,7 @@ else
     A=[];
     for i=1:length(W)
             tmp=getCoeffInDecOrder(W(i),t,deg);
-            sdisplay(tmp)
+            display(tmp)
             A=[A; tmp];
     end
 
@@ -226,7 +226,7 @@ else
     ms = MultiStart('Display','iter','UseParallel',true);
 
     disp('Running, it usually takes some time until the parpool starts');
-    [xgs,fval,exitflag,output,solsgs] = run(ms,problem,400); %8000
+    [xgs,fval,exitflag,output,solsgs] = run(ms,problem,100); %8000
 
     
     obj_values=[solsgs.Fval]; %In increasing order
